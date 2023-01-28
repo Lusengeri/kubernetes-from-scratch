@@ -1,5 +1,10 @@
 variable "availability_zones" {
-  description = "the availability zones withing the current region in which to deploy infrastructure"
+  description = "the availability zones within the current region in which to deploy infrastructure"
+  type        = list(string)
+}
+
+variable "database_subnets" {
+  description = "the cidr blocks of the database subnets"
   type        = list(string)
 }
 
