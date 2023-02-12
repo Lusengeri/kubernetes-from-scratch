@@ -6,6 +6,7 @@ variable "availability_zones" {
 variable "database_subnets" {
   description = "the cidr blocks of the database subnets"
   type        = list(string)
+  default = []
 }
 
 variable "has_igw" {
@@ -22,11 +23,13 @@ variable "namespace" {
 variable "private_subnets" {
   description = "the cidr blocks of the private subnets"
   type        = list(string)
+  default = []
 }
 
 variable "public_subnets" {
   description = "the cidr blocks of the public subnets"
   type        = list(string)
+  default = []
 }
 
 variable "vpc_cidr_block" {
