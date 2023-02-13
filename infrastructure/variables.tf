@@ -8,6 +8,11 @@ variable "aws_profile" {
   type        = string
 }
 
+variable "key_name" {
+  description = "the name of the private key used to ssh into instances" 
+  type = string
+}
+
 variable "namespace" {
   description = "the namespace of the resources to be provisioned by this configuration"
   type        = string
