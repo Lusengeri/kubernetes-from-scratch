@@ -26,6 +26,7 @@ resource "aws_instance" "controller_" {
   availability_zone           = data.aws_availability_zones.available.names[count.index]
   instance_type               = "t2.medium"
   key_name                    = var.key_name
+  subnet_id                   = module.network.subnets.private_subnets[count.index].id
   user_data                   = ""
   user_data_replace_on_change = true
   vpc_security_group_ids      = [module.network.sgs.cluster_sg]
